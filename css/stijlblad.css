@@ -1,0 +1,162 @@
+@import url("normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --kl-Red-: hsl(0, 78%, 62%);
+  --kl-Cyan-: hsl(180, 62%, 55%);
+  --kl-Orange-: hsl(34, 97%, 64%);
+  --kl-Blue-: hsl(212, 86%, 64%);
+
+  --kl-Very-Dark-Blue-: hsl(234, 12%, 34%);
+  --kl-Grayish-Blue-: hsl(229, 6%, 66%);
+  --kl-Very-Light-Gray-: hsl(0, 0%, 98%);
+
+  --fw-200-: 200;
+  --fw-400-: 400;
+  --fw-600-: 600;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  background-color: var(--kl-Very-Light-Gray-);
+}
+
+main {
+  width: 90%;
+  margin: auto;
+}
+header {
+  text-align: center;
+  color: var(--kl-Very-Dark-Blue-);
+}
+header h1 {
+  font-weight: 200;
+  line-height: 1;
+}
+header span {
+  font-weight: 600;
+}
+header p {
+  color: var(--kl-Grayish-Blue-);
+  line-height: 1.75;
+}
+h2 {
+  color: var(--kl-Very-Dark-Blue-);
+}
+.grid-container {
+  display: grid;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.grid-item {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0.25em 0.6em 0.4em lightgray;
+  padding: 2rem;
+  color: var(--kl-Grayish-Blue-);
+}
+#supervisor {
+  border-top: 4px solid var(--kl-Cyan-);
+}
+#team-builder {
+  border-top: 4px solid var(--kl-Red-);
+}
+#karma {
+  border-top: 4px solid var(--kl-Orange-);
+}
+#calculator {
+  border-top: 4px solid var(--kl-Blue-);
+}
+/** Om een afbeelding rechts in een div te krijgen **/
+.grid-item img {
+  display: block;
+  margin-left: auto;
+}
+@media (min-width: 600px) {
+  body {
+    font-size: 15px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  header {
+    text-align: center;
+    color: var(--kl-Very-Dark-Blue-);
+    margin-bottom: 5em;
+  }
+  header h1 {
+    font-weight: 200;
+    line-height: 2;
+  }
+  header span {
+    font-weight: 600;
+  }
+  header p {
+    color: var(--kl-Grayish-Blue-);
+    padding: 0 20em;
+    line-height: 1.75;
+  }
+  main {
+    background-color: var(--kl-Very-Light-Gray-);
+    max-width: 70rem;
+    margin: auto;
+  }
+  .grid-container {
+    display: grid;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.8rem;
+  }
+  .grid-item {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0.25em 0.6em 0.4em lightgray;
+    padding: 2rem;
+    color: var(--kl-Grayish-Blue-);
+  }
+  .grid-item p {
+    margin-bottom: 2rem;
+    line-height: 2em;
+    font-size: 400;
+  }
+
+  #supervisor {
+    border-top: 4px solid var(--kl-Cyan-);
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  #team-builder {
+    border-top: 4px solid var(--kl-Red-);
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  #karma {
+    border-top: 4px solid var(--kl-Orange-);
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  #calculator {
+    border-top: 4px solid var(--kl-Blue-);
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  /** Om een afbeelding rechts in een div te krijgen **/
+  .grid-item img {
+    display: block;
+    margin-left: auto;
+  }
+}
